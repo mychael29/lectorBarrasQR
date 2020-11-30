@@ -3,4 +3,5 @@
     <string name="button">Button</string>
     <string name="escaner_con_firebase">Escaner Con Firebase</string>
     <string name="escanear">Escanear</string>
+    <string name="message_is">El código de barras es:\n</string>
 </resources>

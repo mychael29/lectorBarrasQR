@@ -1,4 +1,4 @@
-package com.example.camerabarcodescanner;
+package com.example.camerabarcodescanner.data.entity;
 
 public class Codigo {
 
