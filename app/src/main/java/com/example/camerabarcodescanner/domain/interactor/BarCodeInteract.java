@@ -11,6 +11,6 @@ public class BarCodeInteract {
     }
 
     public void setBarCodeRepository(String codeBar, BarCodeCallback barCodeCallback) {
-        barCodeRepository.getBarcodeSave(codeBar, barCodeCallback);
+        barCodeRepository.barcodeSave(codeBar, barCodeCallback);
     }
 }

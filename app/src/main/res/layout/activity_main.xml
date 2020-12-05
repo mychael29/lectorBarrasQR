@@ -8,27 +8,65 @@
 
     <TextView
         android:id="@+id/tvBarCode"
-        android:layout_width="366dp"
-        android:layout_height="96dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="62dp"
         android:text="@string/escaner_con_firebase"
-        android:textSize="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/container_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.142" />
-
-    <Button
-        android:id="@+id/btnScanner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/escanear"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.363" />
+        app:layout_constraintVertical_bias="0.142" />
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/container_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.219" >
+        <Button
+            android:layout_margin="10dp"
+            android:id="@+id/btnScanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/escanear" />
+        <Button
+            android:layout_margin="10dp"
+            android:id="@+id/btnSend"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enviar" />
+    </LinearLayout>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_buttons">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rvCodesBars"/>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

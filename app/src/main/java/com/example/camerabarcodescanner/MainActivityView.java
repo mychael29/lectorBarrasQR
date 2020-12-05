@@ -1,6 +1,6 @@
 package com.example.camerabarcodescanner;
 
 public interface MainActivityView {
-    void getSuccess (String code, String message);
-    void error(String message);
+    void success(String message);
+    void errorCapture(String message);
 }
