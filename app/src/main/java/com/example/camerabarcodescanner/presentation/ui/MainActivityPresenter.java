@@ -1,8 +1,7 @@
-package com.example.camerabarcodescanner;
+package com.example.camerabarcodescanner.presentation.ui;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.util.Log;
 
 import com.example.camerabarcodescanner.data.entity.Codigo;
 import com.example.camerabarcodescanner.data.repository.BarCodeRepositoryImpl;
@@ -11,15 +10,12 @@ import com.example.camerabarcodescanner.domain.interactor.BarCodeInteract;
 import com.example.camerabarcodescanner.domain.repository.BarCodeRepository;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.google.zxing.integration.android.IntentResult;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.example.camerabarcodescanner.data.DataConstants.CODES_BARS_LIST;
-import static com.example.camerabarcodescanner.data.DataConstants.ERROR_CODE_BAR;
 import static com.example.camerabarcodescanner.data.DataConstants.PREFERENCE;
-import static com.example.camerabarcodescanner.data.DataConstants.ZERO_CODE_BAR;
 
 public class MainActivityPresenter implements BarCodeCallback {
     private final MainActivityView mainActivityView;
